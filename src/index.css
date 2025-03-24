@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply text-white;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@theme {
+  --color-bg-dark: #1c1c1c; /* Fundo principal - Cinza muito escuro */
+  --color-bg-light: #242424; /* Fundo secundário - Cinza escuro equilibrado */
+
+  --color-text-light: #e1e1e6; /* Texto claro - Suave e legível no fundo escuro */
+  --color-text-dark: #ffffff; /* Texto principal - Branco puro para maior contraste */
+
+  --color-button: #5cffb0; /* Verde vibrante para chamar atenção */
+  --color-button-hover: #3ae89a; /* Versão levemente mais escura para hover */
+
+  --color-link: #3ae89a; /* Verde vibrante, igual ao hover do botão para harmonia */
+  --color-logo: #fbd7e1; /* Rosa claro pastel, mantendo delicadeza */
+
+  --color-error: #ff6b6b; /* Vermelho vibrante para erros, mais destacado */
+  --color-border-shadow: #343434; /* Cinza médio para bordas e sombras sutis */
+  --color-focus: #ffcc99; /* Laranja pastel quente para foco */
+
+  --color-success: #3fcf97; /* Verde médio vibrante, coerente com o botão */
+  --color-warning: #f5b97f; /* Tom quente para avisos, sem perder a harmonia */
+}
