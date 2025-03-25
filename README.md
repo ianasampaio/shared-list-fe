@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# 🛒 Shared List - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Shared List** é um projeto de lista de compras compartilhada que permite a criação de listas e o compartilhamento entre usuários. Este repositório contém o frontend da aplicação, desenvolvido com **React**, **Vite** e **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades (em construção)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Funcionalidades Implementadas:
 
-## Expanding the ESLint configuration
+🔹 Autenticação: Usuários podem se registrar, fazer login com suas credenciais e, caso necessário, recuperar a senha através de um link enviado para o e-mail.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: Biblioteca para construção de interfaces dinâmicas.
+- **Vite**: Ferramenta para build e bundling rápido.
+- **Tailwind CSS**: Framework CSS para estilização responsiva e modular.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Passos para rodar o projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone este repositório:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+   ```sh
+   git clone https://github.com/ianasampaio/shared-list-fe.git
+
+   cd shared-list-fe
+   ```
+
+2. Instale as dependências:
+   ```sh
+   yarn install
+   ```
+3. Para iniciar o servidor de desenvolvimento, execute:
+   ```sh
+   yarn dev
+   ```
