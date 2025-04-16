@@ -2,12 +2,13 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { AuthGuard } from "./AuthGuard";
 import { Login } from "../view/pages/Login";
 import { Register } from "../view/pages/Register";
-import { Home } from "../view/pages/Home";
+import { Dashboard } from "../view/pages/Dashboard";
 import { AuthLayout } from "../view/layouts/AuthLayout";
 import { ForgotPassword } from "../view/pages/ForgotPassword";
 import { ResetPassword } from "../view/pages/ResetPassword";
 import { EmailSentConfirmation } from "../view/pages/ForgotPassword/emailSentConfirmation";
 import { DashboardLayout } from "../view/layouts/DashboardLayout";
+import { List } from "../view/pages/List";
 
 export function Router() {
   return (
@@ -28,7 +29,8 @@ export function Router() {
 
         <Route element={<AuthGuard isPrivate />}>
           <Route element={<DashboardLayout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/list/:id" element={<List />} />
           </Route>
         </Route>
       </Routes>

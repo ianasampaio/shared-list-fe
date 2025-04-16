@@ -45,10 +45,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }, [isError, signout]);
 
-  // if (isFetching) {
-  //   return <LaunchScreen />;
-  // }
-
   return (
     <AuthContext.Provider
       value={{ signedIn: isSuccess && signedIn, signin, signout }}

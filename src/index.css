@@ -1,9 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+@tailwind utilities;
 
 @layer base {
   body {
     @apply text-white;
+    background-color: #1c1c1c;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .custom-scrollbar:hover {
+    scrollbar-color: #343434 #242424;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #343434; /* Cor ao hover */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 }
 
@@ -20,11 +49,13 @@ body {
 
   --color-button: #5cffb0; /* Verde vibrante para chamar atenção */
   --color-button-hover: #3ae89a; /* Versão levemente mais escura para hover */
+  --color-button-light: rgba(90, 255, 176, 0.2);
 
   --color-link: #3ae89a; /* Verde vibrante, igual ao hover do botão para harmonia */
   --color-logo: #fbd7e1; /* Rosa claro pastel, mantendo delicadeza */
 
-  --color-error: #ff6b6b; /* Vermelho vibrante para erros, mais destacado */
+  --color-error-hover: #ff6b6b; /* Vermelho vibrante para erros, mais destacado */
+  --color-error: #e35a5a;
   --color-border-shadow: #343434; /* Cinza médio para bordas e sombras sutis */
   --color-focus: #ffcc99; /* Laranja pastel quente para foco */
 
